@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import ApplicationForm from "../components/ApplicationForm";
 import { Icon } from "../components/Icons";
 
@@ -38,7 +39,7 @@ export default function ApplyPage() {
       }}
     >
       <div style={styles.titleContainer}>
-        <img src="/walmart.png" alt="Walmart Logo" style={styles.logo} />
+        <Image src="/walmart.png" alt="Walmart Logo" style={styles.logo} />
         <div>
           <h2 style={styles.companyName}>Walmart</h2>
           <h1 style={styles.jobTitle}>Sanitation and Hygiene Engineer</h1>

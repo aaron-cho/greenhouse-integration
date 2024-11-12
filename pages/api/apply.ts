@@ -80,7 +80,7 @@ export default async function handler(
     const resumeContent = fs.readFileSync(resumeFile.filepath);
     const base64Resume = Buffer.from(resumeContent).toString("base64");
 
-    const applicationResponse = await axios.post(
+    await axios.post(
       `https://harvest.greenhouse.io/v1/candidates/${candidateId}/attachments`,
       {
         filename: resumeFile.originalFilename,
