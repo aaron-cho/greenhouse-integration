@@ -78,7 +78,7 @@ export default async function handler(
 
     // Step 2: Upload resume as an attachment to the candidate's profile
     const resumeContent = fs.readFileSync(resumeFile.filepath);
-    const base64Resume = Buffer.from(resumeContent).toString("base64");
+    const base64Resume = resumeContent.toString("base64");
 
     await axios.post(
       `https://harvest.greenhouse.io/v1/candidates/${candidateId}/attachments`,
